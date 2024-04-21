@@ -23,30 +23,30 @@ app.get("/", (request, response) => {
 app.post("/signup", async (request, response) => {
     try {
         
-    //   if (
-    //     !request.body.mobileNumber ||
-    //     !request.body.password ||
-    //     !request.body.name
-    //   ) {
-    //     return response.status(400).send({
-    //       message: "send all required fields: mobileNumber, password, name ",
-    //     });
-    //   }
+      if (
+        !request.body.employmentType ||
+        !request.body.email 
+       
+      ) {
+        return response.status(400).send({
+          message: "send all required fields: email, employment Type ",
+        });
+      }
   
-    //   //below we are going to hash the password
+      //below we are going to hash the password
     //   const hashedPassword = await bcrypt.hash(request.body.password, 5);
   
-    //   //below we create a variable for your new book
-    //   const newUser = {
-    //     name: request.body.name,
-    //     mobileNumber: request.body.mobileNumber,
-    //     password: hashedPassword,
-    //   };
+      //below we create a variable for your new book
+      const newUser = {
+        employmentType: request.body.employmentType,
+        email : request.body.email,
+       
+      };
   
-    //   //await user user and check if they exit
-    //   const user = await User.create(newUser);
+      //await user user and check if they exit
+      const user = await User.create(newUser);
   
-    //   return response.status(201).send(user);
+      return response.status(201).send(user);
     } catch (error) {
       console.log(error.message);
       response.status(500).send({ message: error.message });
@@ -56,12 +56,12 @@ app.post("/signup", async (request, response) => {
 
   app.get("/registered-users", async (request, response) => {
     try {
-    //   const products = await Product.find({});
+      const users = await User.find({});
   
-    //   return response.status(200).json({
-    //     // count: books.length,
-    //     data: products,
-    //   });
+      return response.status(200).json({
+      
+        data: users,
+      });
     } catch (error) {
       console.log(error.message);
       response.status(500).send({ message: error.message });
