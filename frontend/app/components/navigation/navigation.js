@@ -11,7 +11,7 @@ export default function Navigation() {
   
   return (
     <>
-      <div className="flex  justify-between items-center py-6 px-20 w-full max-md:px-5 max-sm:px-">
+      <div className="flex  justify-center items-center py-6 px-20 w-full max-md:px-5 max-sm:px-">
         <Link href="/" >
           <Image
             src="/foodlogo.png"
@@ -22,18 +22,7 @@ export default function Navigation() {
             priority
           />
         </Link>
-      
-       
-      <Link href="/">
-        <Image
-          src="/menu3.png"
-          alt="Vercel Logo"
-          className="dark:invert mr-6 max-md:mr-3 hidden max-sm:flex"
-          width={40}
-          height={24}
-          priority
-        />
-      </Link>
+     
       </div>
      
     </>
