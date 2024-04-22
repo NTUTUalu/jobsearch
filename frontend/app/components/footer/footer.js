@@ -4,22 +4,21 @@ import Link from "next/link";
 export default function OnboardingFooter() {
   return (
     <>
-      <div className="bg-pink-3 flex px- pt- pb- h-fit border-t border-yellow-800">
-        <div className="logo flex justify-center items-center pl-5">
-          <Link href="/">
-        <h1 className="font-semibold tracking-wide  text-yellow-900 px-1">POULTRY PLUS<span className="ml-0.5"><sup>+</sup></span></h1></Link>
-          <Link href="/" className="">
-            <Image
-              src="/logo.png"
-              alt="Poultry plus logo"
-              className=""
-              width={60}
-              height={25}
-              priority
-            />
-          </Link>
-        </div>
-      </div>
+          <div className="bottom flex justify-center items-center bg-blue- h-16 border-t-2">
+            <h3 className="flex w-fit h-fit text-xs bg-pink- text-slate-400">
+              Copyright{" "}
+              <Image
+                src="/copyright.png"
+                alt="Poultry plus logo"
+                className="h-4 flex place-self-center
+                      mx-1 opacity-60"
+                width={15}
+                height={15}
+                priority
+              />{" "}
+              2023 All right reserved | African 2-2 Inc.
+            </h3>
+          </div>
     </>
   );
 }
