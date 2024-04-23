@@ -38,7 +38,7 @@ export default function MoodSetter() {
               Are you a graduate or student in Lesotho searching for job placements? Join the waitlist for Lesotho's first-ever job search platform! We're here to help you find the perfect opportunity to kickstart your career journey. Don't miss out – sign up now!
             </p>
             <div className={` flex`}>
-              <Link href="#" className="">
+              <Link href="/#onboard" className="">
                 <button className={`${Styles.button} basis-1 flex text-white tracking-wide text-base font-semibold rounded-3xl py-2 px-8`}>
                   Join Waitlist
                 </button>
