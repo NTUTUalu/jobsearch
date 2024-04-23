@@ -28,12 +28,9 @@ app.post("/signup", async (request, response) => {
        
       ) {
         return response.status(400).send({
-          message: "send all required fields: email, employment Type ",
+          message: "send all required fields: email",
         });
       }
-  
-      //below we are going to hash the password
-    //   const hashedPassword = await bcrypt.hash(request.body.password, 5);
   
       //below we create a variable for your new book
       const newUser = {

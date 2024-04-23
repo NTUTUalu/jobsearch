@@ -1,9 +1,11 @@
+'use client'
+
 import React from "react";
 import { BackgroundBeams } from "./background-beam";
 import "./onboard.module.css";
 import Styles from "./onboard.module.css"; // Correct import path
 import toast, { Toaster } from "react-hot-toast";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BASE_API_URL } from "../../../constants";
 
 export default function Onboard() {
