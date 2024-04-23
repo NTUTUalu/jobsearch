@@ -24,7 +24,6 @@ app.post("/signup", async (request, response) => {
     try {
         
       if (
-        !request.body.employmentType ||
         !request.body.email 
        
       ) {
@@ -38,7 +37,7 @@ app.post("/signup", async (request, response) => {
   
       //below we create a variable for your new book
       const newUser = {
-        employmentType: request.body.employmentType,
+       
         email : request.body.email,
        
       };

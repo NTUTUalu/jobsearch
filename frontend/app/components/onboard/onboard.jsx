@@ -3,11 +3,55 @@ import { BackgroundBeams } from "./background-beam";
 import "./onboard.module.css";
 import Styles from "./onboard.module.css"; // Correct import path
 import toast, { Toaster } from "react-hot-toast";
+import { useState, useEffect } from "react";
+import { BASE_API_URL } from "../../../constants";
 
 export default function Onboard() {
+  const [email, setEmail] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    toast.success("You have registered successfully!");
+    // toast.success("Successfully added to waiting list!");
+
+    if (!email) {
+      toast.error("enter email!");
+
+      return;
+    }
+    if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+      //we are saying the first character must be an alphabet, there will be a space, then any character from A-z
+      toast.error("Invalid email!");
+
+      return false;
+    }
+
+    // toast.success("Successfully added to waiting list!");
+    try {
+      const res = await fetch(`${BASE_API_URL}/signup`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email
+        }),
+      })
+      
+      if (res.ok) {
+        
+        setEmail("");
+
+        toast.success("Successfully added to the waiting list!");
+        
+    } else {
+        // console.log("user registration failed.");
+        toast.error("email is already added!");
+    }
+  } catch (error) {
+    toast.error("Cannot connect to remote servers, contact Administration");
+    // console.log("error during registration: ", error);
+  }
+
   };
 
   return (
@@ -24,15 +68,19 @@ export default function Onboard() {
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
           Join Us Early! Get Updates on Our Launch!
         </p>
-        <div className="flex w-full justify-center items-center bg-pink-1 mt-4">
+        <form className="flex w-full justify-center items-center bg-pink-1 mt-4" autoComplete="off"
+                onSubmit={handleSubmit}>
           <input
-            type="text"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             maxLength="45"
+            default=""
             placeholder="hi@manuarora.in"
-            className="rounded-lg border text-white font-light border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10  p-2 bg-neutral-950 placeholder:text-neutral-700"
+            className="rounded-lg border text-white font-extralight border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10 tracking-wider p-2 bg-neutral-950 placeholder:text-neutral-700 text-sm"
           />
 
-          <button className={`${Styles.btn} ml-4  `} onClick={handleSubmit}>
+          <button className={`${Styles.btn} ml-4  `}  type="submit">
             <strong className={`${Styles.strong}  `}>JOIN</strong>
             <div id="container-stars">
               <div id="stars"></div>
@@ -43,7 +91,7 @@ export default function Onboard() {
               <div className={`${Styles.circle}  `}></div>
             </div>
           </button>
-        </div>
+        </form>
       </div>
       <BackgroundBeams />
     </div>
