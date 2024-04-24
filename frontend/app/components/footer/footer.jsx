@@ -8,7 +8,7 @@ export default function OnboardingFooter() {
             <h3 className="flex w-fit h-fit text-xs bg-pink- text-slate-400">
               Copyright{" "}
               <Image
-                src="/copyright.png"
+                src="/copyright2.png"
                 alt="Poultry plus logo"
                 className="h-4 flex place-self-center
                       mx-1 opacity-60"
