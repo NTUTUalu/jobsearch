@@ -16,7 +16,7 @@ export default function OnboardingFooter() {
                 height={15}
                 priority
               />{" "}
-              2023 All right reserved | African 2-2 Inc.
+              2023 All right reserved | Lesotho Inc.
             </h3>
           </div>
     </>
