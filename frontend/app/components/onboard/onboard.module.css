@@ -168,4 +168,15 @@
    
     }
   }
+
+  /* media queries */
+  .btn {
+    /* Existing styles */
+
+    /* Media query for small screen sizes */
+    @media (max-width: 640px) {
+        width: 100%; /* Set width to 100% for small screens */
+        background-color:pink;
+    }
+}
   
