@@ -67,7 +67,7 @@ export default function Onboard() {
       <div className="hidden max-sm:flex max-sm:w-full max-sm:bg-pink-5 max-sm:justify-center max-sm:mb-4  ">
       <img src="/on.svg" alt="Description" className="w-36 h-36"/>
       </div>
-        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+        <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold max-sm:text-2xl">
           Join the waitlist
         </h1>
 
