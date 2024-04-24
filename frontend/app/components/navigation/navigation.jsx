@@ -6,14 +6,14 @@ import Image from "next/image";
 export default function Navigation() {
   return (
     <>
-      <div className="flex bg- justify-center items-center py-6 px-20 w-full max-md:px-5 max-sm:px-">
+      <div className="flex bg-neutral-950 justify-center items-center py-2 px-20 w-full max-md:px-5 max-sm:px-">
         <Link href="/">
           <Image
-            src="/foodlogo.png"
+            src="/logo2.png"
             alt="Vercel Logo"
-            className="dark:invert max-md:w-24"
-            width={120}
-            height={25}
+            className="dark:invert bg-pink-2 max-md:w-24"
+            width={140}
+            height={35}
             priority
           />
         </Link>

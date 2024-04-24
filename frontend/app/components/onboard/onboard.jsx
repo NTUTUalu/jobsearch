@@ -58,7 +58,7 @@ export default function Onboard() {
 
   return (
     <div
-      className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
+      className="h-[40rem] w-full  bg-neutral-950 relative flex flex-col items-center justify-center m-0"
       id="onboard"
     >
       <Toaster position="top-center" reverseOrder={false} />

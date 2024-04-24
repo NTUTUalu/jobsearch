@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function OnboardingFooter() {
   return (
     <>
-          <div className="bottom flex justify-center items-center bg-blue- h-16 border-t-2">
+          <div className="bottom bg-neutral-950 flex justify-center items-center bg-blue- h-16 border-t-2">
             <h3 className="flex w-fit h-fit text-xs bg-pink- text-slate-400">
               Copyright{" "}
               <Image
