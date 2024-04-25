@@ -11,7 +11,7 @@ export default function Navigation() {
           <Image
             src="/logo2.png"
             alt="Vercel Logo"
-            className="dark:invert bg-pink-2 max-md:w-24"
+            className="dark:invert bg-pink-2 max-md:w-24 opacity-1"
             width={140}
             height={35}
             priority

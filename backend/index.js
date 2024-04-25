@@ -32,11 +32,17 @@ app.post("/signup", async (request, response) => {
         });
       }
   
+       // Check if the email already exists
+    const existingUser = await User.findOne({ email: request.body.email });
+    if (existingUser) {
+      return response.status(400).send({
+        message: "Email already exists",
+      });
+    }
+
       //below we create a variable for your new book
       const newUser = {
-       
         email : request.body.email,
-       
       };
   
       //await user user and check if they exit
@@ -44,7 +50,7 @@ app.post("/signup", async (request, response) => {
   
       return response.status(201).send(user);
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
       response.status(500).send({ message: error.message });
     }
   });
