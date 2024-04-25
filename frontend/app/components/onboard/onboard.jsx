@@ -83,7 +83,7 @@ export default function Onboard() {
             maxLength="45"
             default=""
             placeholder="hi@manuarora.in"
-            className="rounded-lg border text-white font-extralight border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10 tracking-wider p-2 bg-neutral-950 placeholder:text-neutral-700 text-sm max-sm:m-0 max-sm:w-full max-sm:h-10"
+            className="rounded-lg border-2 text-white font-extralight border-neutral-800 focus:ring-2  focus:ring-teal-500  w-full relative z-10 tracking-wider p-2 bg-neutral-950 placeholder:text-neutral-700 text-sm max-sm:m-0 max-sm:w-full max-sm:h-10"
           />
 
           <button className={`${Styles.btn} ml-4  max-sm:w-full  max-sm:m-0 max-sm: `}  type="submit">
