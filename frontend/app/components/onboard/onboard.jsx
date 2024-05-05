@@ -8,6 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 import { BASE_API_URL } from "../../../constants";
 
+
 export default function Onboard() {
   const [email, setEmail] = useState("");
 
